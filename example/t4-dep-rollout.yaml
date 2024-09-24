@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: deployment-rollout
   annotations:
-    kubernetes.io/change-cause: v2, change port  # 通过注解增加说明
+    kubernetes.io/change-cause: v3, change port  # 通过注解增加说明
 spec:
   replicas: 3  # 副本数3个
   selector:
@@ -18,4 +18,4 @@ spec:
       - name: my-nginx-co
         image: nginx  # nginx镜像
         ports:
-        - containerPort: 80  # V1
+        - containerPort: 100  # V3

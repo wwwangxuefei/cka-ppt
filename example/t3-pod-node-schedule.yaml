@@ -3,8 +3,8 @@ kind: Pod
 metadata:
   name: pod-high
 spec:
-  nodeSelector:
-    hardware: high  # 这里是你的节点标签
+#  nodeSelector:
+#    hardware: high  # 这里是你的节点标签
   tolerations:    # 这里是容忍度配置
   - key: "ready"
     operator: "Equal"
