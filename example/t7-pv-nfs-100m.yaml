@@ -8,6 +8,6 @@ spec:
   accessModes:
     - ReadWriteMany # 访问模式
   nfs:
-    server: k8s-worker1
-    path: /nfs/shared
+    server: k8s-worker1  # 替换你的nfs服务器IP、url或者主机名
+    path: /nfs/shared  # 替换你的nfs共享目录
 

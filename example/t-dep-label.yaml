@@ -1,0 +1,21 @@
+# nginx 应用部署
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: n-dep-1
+spec:
+  replicas: 3  # 副本数3个
+  selector:
+    matchLabels:
+      app: nginx-app
+  template:
+    metadata:
+      labels:
+        app: nginx-app
+    spec:
+      containers:
+      - name: my-nginx-co
+        image: nginx  # nginx镜像
+        ports:
+        - containerPort: 80  # 暴露端口号
+

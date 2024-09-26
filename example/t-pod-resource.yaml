@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-nginx-resources-limit
+spec:
+  containers:
+  - name: nginx-c
+    image: nginx
+    resources:
+      requests:
+        memory: "10Gi"
+        cpu: "8"
+      limits:
+        memory: "16Gi"
+        cpu: "16"
